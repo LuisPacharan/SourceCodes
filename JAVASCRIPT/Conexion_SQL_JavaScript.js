@@ -28,7 +28,7 @@ async function getDB() {
         console.log(result);
         sql.close();
     } catch(error){
-console.log(err.message);
+console.log(error.message);
 sql.close();
     }
 }
