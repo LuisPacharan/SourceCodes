@@ -66,7 +66,30 @@ ON T1.NOMBRE_CAMPO= T2.NOMBRE_CAMPO;
 DELETE FROM 'NOMBRE_TABLA' WHERE CAMPO = 'N';
 
 
-/*---------- CLÁUSULAS -------------*/
+/*---------- OPERADOR (EXIST) -------------*/
+
+SELECT COLUMNA FROM 'NOMBRE_TABLA'
+WHERE EXISTS (SELECT COLUMNA FROM 'NOMBRE_TABLA' WHERE CONDICION);
+
+---------EXIST Para validar existencia de un objeto en la BD------------
+
+IF EXISTS
+(
+    SELECT *
+    FROM sys.objects
+    WHERE object_id = OBJECT_ID(N'dbo.NOMBRE_OBJETO')
+)
+    BEGIN
+        PRINT 'OBJETO YA EXISTE';
+END;
+
+ELSE
+	BEGIN
+		PRINT 'OBJETO NO EXISTE';
+	END;
+
+
+/*---------- USO DE CLÁUSULAS -------------*/
 
 - SELECT
 - FROM
