@@ -6,8 +6,8 @@ Library             RPA.Browser.Selenium      auto_close=${False}
 Open intranet robocorp
     Open Available Browser  https://www.linkedin.com/
 Log in
-    Input Text        session_key    pacheco.arana.luis@gmail.com
-    Input Password    session_password    Pachelinkedin_20211
+    Input Text        session_key    correo_electronico@gmail.com
+    Input Password    session_password    tu_contraseña
     Submit Form
 
 *** Tasks ***
