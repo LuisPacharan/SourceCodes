@@ -3,7 +3,7 @@ Library                 RPA.Outlook.Application
 Task Setup              Open Application
 
 *** Variables ***
-${RECIPIENT}            pacheco.arana.luis@Outlook.es
+${RECIPIENT}            direccion_de_correo@Outlook.es
 
 *** Tasks ***
 Send message

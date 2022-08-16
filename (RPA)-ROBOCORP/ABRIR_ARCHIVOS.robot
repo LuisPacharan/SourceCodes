@@ -5,8 +5,8 @@ Task Setup              Open Application
 
 *** Tasks ***
 Open existing file
-    Open File          C:/Users/pache/Desktop/tarea_estrategias_de_comercio.docx
+    Open File          C:/Users/pc/Desktop/archivo_word.docx
     Write Text         Hola, ésta es una prueba de Escritura Automática
-    Save Document AS   C:/Users/pache/Desktop/tarea_estrategias_de_comercio_2.docx
+    Save Document AS   C:/Users/pc/Desktop/archivo_word_new.docx
     ${texts}=           Get all Texts
     Close Document
