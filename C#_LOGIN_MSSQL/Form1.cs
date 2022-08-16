@@ -23,7 +23,7 @@ namespace Sistema_Web
 
         }
 
-        SqlConnection mi_conexion = new SqlConnection("server = LAPTOP-BCVE4C0O\\PC_QUIQUE; database = DB_PRUEBAS; Integrated Security= true ");
+        SqlConnection mi_conexion = new SqlConnection("server = LAPTOP-ABCDE\\PC_NAME; database = DB_PRUEBAS; Integrated Security= true ");
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
