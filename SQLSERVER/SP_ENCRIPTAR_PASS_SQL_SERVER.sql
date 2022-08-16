@@ -1,4 +1,4 @@
---****************ENCRIPTACIÓN DE CONTRASEÑA SQL SERVER****************
+--****************ENCRIPTACIÃ“N DE CONTRASEÃ‘A SQL SERVER****************
 
 /*----------------------------------------- Crear la tabla de usuarios--------------------------------------------*/
 
@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[TBL_USUARIOS](
  CONSTRAINT [PK_TBL_USUARIOS] PRIMARY KEY CLUSTERED 
 (
 
-/*--------------------------------------- Crear SP que cifre la contraseña ------------------------------------------*/
+/*--------------------------------------- Crear SP que cifre la contraseÃ±a ------------------------------------------*/
 
 CREATE procedure [dbo].[sp_IngresarUsuarioNuevo]
 @name varchar(50),
@@ -20,8 +20,8 @@ begin
 set nocount on
 declare @passencoder as  VARBINARY(8000)
 set @passencoder=ENCRYPTBYPASSPHRASE ('password',@pass);
-insert into TBL_USUARIOS(USUARIO,CONTRASENA)
-values (@name, ENCRYPTBYPASSPHRASE ('password',@pass))
+insert into TBL_USUARIOS(USUARIO,CONTRASENA,ROL)
+values (@name, ENCRYPTBYPASSPHRASE ('password',@pass),1)
  
 end
 
@@ -31,7 +31,7 @@ end
 exec sp_IngresarUsuarioNuevo 'Usuario1','pass_123'
 exec sp_IngresarUsuarioNuevo 'Usuario2','clave_234'
 
-/*-------------------------------- Revisar el resultado de la execución en la tabla --------------------------------------*/
+/*-------------------------------- Revisar el resultado de la execuciÃ³n en la tabla --------------------------------------*/
 
 SELECT * FROM [TBL_USUARIOS]
 
