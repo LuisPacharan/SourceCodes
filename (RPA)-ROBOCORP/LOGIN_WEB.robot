@@ -7,8 +7,6 @@ Open intranet robocorp
     Open Available Browser  https://www.linkedin.com/
 Log in
 <<<<<<< HEAD
-    Input Text        session_key    pacheco.arana.luis@gmail.com
-    Input Password    session_password    Pachelinkedin_20211
 =======
     Input Text        session_key    correo_electronico@gmail.com
     Input Password    session_password    tu_contraseña
