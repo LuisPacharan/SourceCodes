@@ -20,7 +20,7 @@ Set @i = @i + 1
 End
 
 
---Resiltado--
+--Resultado--
 --CODIGO_07102022_1                                                 
 --CODIGO_07102022_2                                                 
 --CODIGO_07102022_3                                                 
