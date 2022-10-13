@@ -43,7 +43,7 @@ Select * from TBL_Nueva
 
 select id,Replace(Codigo_Creado,' ','')Codigo_Creado From TBL_Nueva
 
---Resiltado--
+--Resultado--
 --id  Codigo_Creado
 --1	  CODIGO_13102022_1_Nvo
 --2	  CODIGO_13102022_2_Nvo
