@@ -1,4 +1,4 @@
---Resuelve la Serie de Fibonacci que es la sucesión donde cada término es la suma de los dos anteriores.
+--Resuelve la Serie de Fibonacci que es la sucesiÃ³n donde cada tÃ©rmino es la suma de los dos anteriores.
 
 Print 'Fibonacci Series'
 declare @a int , @b int , @c int , @i int
@@ -11,3 +11,18 @@ while @i<10
 		set @i=@i+1
 		set @a=@b set @b=@c
 	end
+	
+	
+--Resultado --
+
+Fibonacci Series
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
