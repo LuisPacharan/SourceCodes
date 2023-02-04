@@ -1,3 +1,7 @@
+--****************ENCRIPTACIÓN DE CONTRASEÑA SQL SERVER****************
+
+/*----------------------------------------- Crear la tabla de usuarios--------------------------------------------*/
+
 CREATE TABLE [dbo].[TBL_USUARIOS](
 	[ID_USUARIO] [int] IDENTITY(1,1) NOT NULL,
 	[USUARIO] [varchar](50) NULL,
