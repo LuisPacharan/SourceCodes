@@ -1,0 +1,39 @@
+body {
+}
+
+.Tabla {
+    width 800px;
+}
+
+.Encabezado {
+    height 50px;
+    text-align center;
+    background-color#034c81;
+    color#fff;
+    font-sizelarge;
+}
+
+.Menu{
+    height300px;
+    width200px;
+    background-color#77bef1;
+    font-sizemedium;
+    text-aligncenter;
+    color#fff;
+}
+
+.Contenido{
+    width600px;
+    text-aligncenter;
+    color#034c81;
+    font-sizemedium;
+}
+
+.Pie{
+    height40px;
+    text-aligncenter;
+    margin-top0px;
+    background-color#302929;
+    color#fff;
+    font-sizelarge;
+}
