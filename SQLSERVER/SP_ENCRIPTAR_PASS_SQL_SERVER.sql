@@ -6,8 +6,9 @@ CREATE TABLE [dbo].[TBL_USUARIOS](
 	[ID_USUARIO] [int] IDENTITY(1,1) NOT NULL,
 	[USUARIO] [varchar](50) NULL,
 	[CONTRASENA] [varbinary](128) NULL,
- CONSTRAINT [PK_TBL_USUARIOS] PRIMARY KEY CLUSTERED 
-(
+	[ROL] int
+ CONSTRAINT [PK_TBL_USUARIOS] PRIMARY KEY (ID_USUARIO)
+ )
 
 /*--------------------------------------- Crear SP que cifre la contraseña ------------------------------------------*/
 
