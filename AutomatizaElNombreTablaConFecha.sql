@@ -1,0 +1,39 @@
+USE DB_PRUEBAS
+
+/* CAMBIA DE MANERA AUTOMÁTICA LA FECHA DE TABLAS EN UN PROCESO*/
+
+--Este proceso registra las fecha de ayer y la fecha del día de hoy con el formato [ddmmyyyy]
+
+DECLARE @Query1  VARCHAR(MAX), @Query2  VARCHAR(MAX),
+		@ANIO   VARCHAR(10), @MES VARCHAR(10),
+		@DIAHOY VARCHAR(10), @DIAAYER VARCHAR(10),
+		@FECHOY VARCHAR(255),@FECAYER VARCHAR(255)
+SET @ANIO	 = DATEPART(YY,GETDATE()-1)
+SET @MES     = RIGHT('0'+ RTRIM(DATEPART(MM,GETDATE()-1)),2)
+SET @DIAAYER = RIGHT('0'+ RTRIM(DATEPART(DD,GETDATE()-1)),2)
+SET @DIAHOY  = RIGHT('0'+ RTRIM(DATEPART(DD,GETDATE())),2)
+SET @FECAYER = @DIAAYER+''+@MES+''+@ANIO
+SET @FECHOY  = @DIAHOY+''+@MES+''+@ANIO
+
+PRINT @FECAYER
+PRINT @FECHOY
+--SET @Query1 = 'SELECT * FROM TBL_TABLA_UNO_'+@DIAAYER+''+@MES+''+@ANIO+'_A' EXEC (@Query1)
+
+-- Aquí se utiliza un SP_RENAME para renombrar la tabla de ayer con la tabla de hoy --
+
+SET @Query1 =
+' 
+SP_RENAME ''TBL_TABLA_UNO_'+@DIAAYER+''+@MES+''+@ANIO+'_A'',''TBL_TABLA_UNO_'+@DIAHOY+''+@MES+''+@ANIO+'_A''
+'
+EXEC (@Query1)
+
+SET @Query2 =
+' 
+SP_RENAME ''TBL_TABLA_DOS_'+@DIAAYER+''+@MES+''+@ANIO+'_A'',''TBL_TABLA_DOS_'+@DIAHOY+''+@MES+''+@ANIO+'_A''
+'
+EXEC (@Query2)
+
+
+--revisar tablas
+--SELECT * FROM TBL_TABLA_UNO_21022023_A
+--SELECT * FROM TBL_TABLA_DOS_21022023_A
