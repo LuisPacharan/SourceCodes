@@ -1,8 +1,8 @@
 USE DB_PRUEBAS
 
-/* CAMBIA DE MANERA AUTOM¡TICA LA FECHA DE TABLAS EN UN PROCESO*/
+/* CAMBIA DE MANERA AUTOM√ÅTICA LA FECHA DE TABLAS EN UN PROCESO*/
 
---Este proceso registra las fecha de ayer y la fecha del dÌa de hoy con el formato [ddmmyyyy]
+--Este proceso registra las fecha de ayer y la fecha del d√≠a de hoy con el formato [ddmmyyyy]
 
 DECLARE @Query1  VARCHAR(MAX), @Query2  VARCHAR(MAX),
 		@ANIO   VARCHAR(10), @MES VARCHAR(10),
@@ -19,7 +19,7 @@ PRINT @FECAYER
 PRINT @FECHOY
 --SET @Query1 = 'SELECT * FROM TBL_TABLA_UNO_'+@DIAAYER+''+@MES+''+@ANIO+'_A' EXEC (@Query1)
 
--- AquÌ se utiliza un SP_RENAME para renombrar la tabla de ayer con la tabla de hoy --
+-- Aqu√≠ se utiliza un SP_RENAME para renombrar la tabla de ayer con la tabla de hoy --
 
 SET @Query1 =
 ' 
@@ -35,5 +35,10 @@ EXEC (@Query2)
 
 
 --revisar tablas
+--ayer
+--SELECT * FROM TBL_TABLA_UNO_20022023_A
+--SELECT * FROM TBL_TABLA_DOS_20022023_A
+
+--hoy
 --SELECT * FROM TBL_TABLA_UNO_21022023_A
 --SELECT * FROM TBL_TABLA_DOS_21022023_A
