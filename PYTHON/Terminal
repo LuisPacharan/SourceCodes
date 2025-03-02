@@ -1,0 +1,30 @@
+-- Configurar la version de JAVA, con alguna versión compatible con tu desarrollo , que tengas instalada en tu computadora, desde la terminal:
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-16.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
+
+java --version
+
+--------------------------------
+--------------------------------
+
+Ejemplo en Colab
+
+!sudo apt-get update
+!sudo apt-get install openjdk-17-jdk
+
+
+import os
+
+os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-17-openjdk-amd64"
+os.environ["PATH"] += ":/usr/lib/jvm/java-17-openjdk-amd64/bin"
+!update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+
+print(f"JAVA_HOME: {os.environ['JAVA_HOME']}")
+!java -version
+
+------ Output: -----
+JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+openjdk version "17.0.14" 2025-01-21
+OpenJDK Runtime Environment (build 17.0.14+7-Ubuntu-122.04.1)
+OpenJDK 64-Bit Server VM (build 17.0.14+7-Ubuntu-122.04.1, mixed mode, sharing)
